@@ -136,6 +136,9 @@ public class Graph {
                 edge.setSource(cellsList.get(firstVertexNumber).getChildAt(0));
                 edge.setTarget(cellsList.get(secondVertexNumber).getChildAt(0));
                 cellsList.add(edge);
+                int arrow = GraphConstants.ARROW_SIMPLE;
+                GraphConstants.setLineEnd(edge.getAttributes(), arrow);
+                GraphConstants.setEndFill(edge.getAttributes(), true);
             }
         }
 
